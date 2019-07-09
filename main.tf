@@ -1,10 +1,13 @@
 /**
- * [![Build Status](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-gcp-network/job/master/badge/icon)](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-gcp-network/job/master/)
- * #  terraform-gcp-network
+ * [![Build Status](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/buildStatus/icon?job=dcos-terraform%2Fterraform-gcp-network-peering%2Fsupport%252F0.2.x)](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-gcp-network-peering/job/support%252F0.2.x/)
  *
- * Creates a DC/OS network for GCP for Masters and Agents
+ * DC/OS GCP Network Peering
+ * =============================
  *
- * ## EXAMPLE
+ * Creates a DC/OS network peering between two networks, autocreates routes
+ *
+ * EXAMPLE
+ * -------
  *
  * ```hcl
  * module "dcos-network-peering" {
