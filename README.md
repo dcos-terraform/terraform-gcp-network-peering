@@ -1,15 +1,15 @@
 [![Build Status](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/buildStatus/icon?job=dcos-terraform%2Fterraform-gcp-network-peering%2Fsupport%252F0.2.x)](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-gcp-network-peering/job/support%252F0.2.x/)
 
-DC/OS GCP Network Peering
+GCP Network Peering
 =============================
 
-Creates a DC/OS network peering between two networks, autocreates routes
+Creates a GCP network peering between two networks, autocreates routes
 
 EXAMPLE
 -------
 
 ```hcl
-module "dcos-network-peering" {
+module "network-peering" {
   source  = "dcos-terraform/network-peering/gcp"
   version = "~> 0.2.0"
 
@@ -36,9 +36,9 @@ module "dcos-network-peering" {
 
 | Name | Description |
 |------|-------------|
-| depends\_id | Peering ID for null_resource triggers usage on additional peering module calls |
-| peering\_state\_details\_local | Local peering state details |
-| peering\_state\_details\_remote | Remote peering state details |
-| peering\_state\_local | Local peering state |
-| peering\_state\_remote | Remote peering state |
+| local\_peering\_state | Local peering state |
+| local\_peering\_state\_details | Local peering state details |
+| peering\_resource\_id | Peering ID for null_resource triggers usage on additional peering module calls |
+| remote\_peering\_state | Remote peering state |
+| remote\_peering\_state\_details | Remote peering state details |
 
