@@ -30,11 +30,13 @@ module "dcos-network-peering" {
 | local\_network\_self\_link | Local network self_link | string | n/a | yes |
 | remote\_network\_name | Remote network name, used for naming the peering | string | n/a | yes |
 | remote\_network\_self\_link | Remote network self_link | string | n/a | yes |
+| wait\_for\_peering\_id | The peering ID we need to wait for, before we can create another peering | string | `""` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| depends\_id | Peering ID for null_resource triggers usage on additional peering module calls |
 | peering\_state\_details\_local | Local peering state details |
 | peering\_state\_details\_remote | Remote peering state details |
 | peering\_state\_local | Local peering state |

@@ -17,3 +17,8 @@ output "peering_state_details_remote" {
   description = "Remote peering state details"
   value       = "${google_compute_network_peering.remote.state_details}"
 }
+
+output "depends_id" {
+  description = "Peering ID for null_resource triggers usage on additional peering module calls"
+  value       = "${null_resource.dummy_dependency.id}"
+}

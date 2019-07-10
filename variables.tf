@@ -21,3 +21,8 @@ variable "remote_network_self_link" {
   description = "Remote network self_link"
   type        = "string"
 }
+
+variable "wait_for_peering_id" {
+  description = "The peering ID we need to wait for, before we can create another peering"
+  default     = ""
+}
