@@ -4,25 +4,26 @@ variable "cluster_name" {
 
 variable "local_network_name" {
   description = "Local network name, used for naming the peering"
-  type        = "string"
+  type        = string
 }
 
 variable "local_network_self_link" {
   description = "Local network self_link"
-  type        = "string"
+  type        = string
 }
 
 variable "remote_network_name" {
   description = "Remote network name, used for naming the peering"
-  type        = "string"
+  type        = string
 }
 
 variable "remote_network_self_link" {
   description = "Remote network self_link"
-  type        = "string"
+  type        = string
 }
 
 variable "wait_for_peering_id" {
   description = "The peering ID we need to wait for, before we can create another peering"
   default     = ""
 }
+
